@@ -17,7 +17,8 @@ jobs:
         run: echo "Build Started"
 
       - name: List Files
-        run: ls -la
+        run: |
+          find . -maxdepth 1 -mindepth 1 -printf '%f\n' | grep -E '^(\.github|README\.md|index\.html)$'
 
       - name: Build Successful
         run: echo "Build Completed Successfully"
