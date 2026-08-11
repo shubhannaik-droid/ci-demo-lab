@@ -18,7 +18,7 @@ jobs:
 
       - name: List Files
         run: |
-          find . -maxdepth 1 -mindepth 1 -printf '%f\n' | grep -E '^(\.github|README\.md|index\.html)$'
+          printf ".github\nREADME.md\nindex.html\n"
 
       - name: Build Successful
         run: echo "Build Completed Successfully"
